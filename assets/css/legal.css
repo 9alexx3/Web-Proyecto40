@@ -1,0 +1,45 @@
+.negrita{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.introduccion{
+    margin-bottom: 1rem;
+}
+
+.disc{
+    list-style-type: disc;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0.40rem;
+}
+
+.latin{
+    list-style-type: lower-alpha;
+}
+
+.numeracion{
+    text-decoration: none;
+    list-style-type:decimal;
+}
+
+.roman{
+    list-style: lower-roman;
+}
+
+.regla{
+    margin-bottom: 1rem;
+    line-height: 20px;
+    font-size: 1rem;
+}
+
+.url{
+    color: var(--main-color);
+}
+
+h3{
+    font-size: medium;
+}
