@@ -1,0 +1,100 @@
+:root{
+    --fondo-bg-color--main: #efefef;
+    --fondo-bg-color--main--caja: #ffffff;
+    --main-color: #3498DB;
+    --main-texto: #000;
+}
+
+.contenido {
+    background-color: var(--fondo-bg-color--main);
+    height: auto;
+    display: block;
+}
+
+.caja {
+    font-size: 1em;
+    color: var(--main-texto);
+    width: 75%;
+    height: fit-content;
+    margin: 0 auto 1em auto;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0.75rem;
+    background-color: var(--fondo-bg-color--main--caja);
+    text-align: left;
+}
+
+.reglas{
+    margin: 2%;
+}
+
+.titulo {
+    text-align: center;
+    font-style: bold;
+    font-weight: bold;
+    font-size: large;
+    line-height: 23px;
+    color: var(--main-color);
+    padding: 0.85rem 0 0 0;
+    margin-bottom: 1.32em;
+    position: relative;
+}
+
+.titulo:after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 32px;
+    border-radius: 4px;
+    background: var(--main-color);
+    left: calc(50% - 14px);
+    bottom: -6px;
+}
+
+
+.introduccion{
+    text-align: left;
+}
+
+.titulos-reglas{
+    text-align: left;
+    font-size: medium;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.youtuber{
+    color: red;
+}
+.vip{
+    color: cyan;
+}
+.premium{
+    color: goldenrod;
+}
+
+.change-theme {
+    position: fixed;
+}
+
+.dark{
+    --fondo-bg-color--main: #1b1b1b;
+    --fondo-bg-color--main--caja: #272727;
+    --main-texto: #E2E2E2;
+}
+
+@media (max-width: 768px) {
+    .caja {
+        padding: 1rem;
+    }
+}
+
+.significado{
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    background-image: linear-gradient(to right, rgb(102, 0, 255) 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+    cursor: help;
+}
