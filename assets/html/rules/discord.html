@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="language" content="es"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="/assets/images/logos/logo.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Proyecto40</title>
+
+    <!-- SEO -->
+    <meta name="author" content="Proyecto40 Network"/>
+    <meta name="keywords" content="Minecraft, Multiplayer, no-premium, videojuego, español, servidor de minecraft, pvp, survival, vanilla, minecraft server"/>
+    <meta name="description" content="Lee todas las reglas del servidor de Discord."/>
+    <meta name="copyright" content="Copyright Proyecto40. 2022 Todos Los Derechos Reservados." />
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Properties -->
+    <meta property="og:title" content="Proyecto40 Network" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://proyecto40.es" />
+    <meta property="og:image" content="https://proyecto40.es" />
+    
+    <!-- Twitter Card Properties -->
+    <meta name="twitter:title" content="Proyecto40 Network" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://proyecto40.es/assets/images/logo.png" />
+
+    <!--  CSS  -->  
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/index.css"/>
+    <link rel="stylesheet" href="/assets/css/discord.css"/>
+
+    
+    <!-- PRELOADER -->
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/939bf925fa.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&amp;display=swap" rel="stylesheet">
+    <script src="/assets/javascript/users-online.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    
+
+</head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <!-- MENÚ-EMOJI PARA MÓVILES -->
+                <div id="modal-backdrop"></div>
+                <div class="mobile-topbar" id="mobile-topbar">
+                    <ul id="mobile-topbar--ul" class="mobile-topbar--ul">
+                        <li class="mobile-topbar--ul--li"><a class="mobile-topbar--ul--li-a" href="./index.html"><i class="fas fa-home" aria-hidden="true"></i> <span class="mobile-topbar-ul---span">Inicio</span></a></li> 
+                        <li class="mobile-topbar--ul--li"><a class="mobile-topbar--ul--li-a" href="https://discord.gg/NfUg5WBGuQ"><i class="fa-brands fa-discord"></i> <span class="mobile-topbar-ul---span">Discord</span></a></li>
+                        <li class="mobile-topbar--ul--li"><a class="mobile-topbar--ul--li-a" href="https://store.proyecto40.es"><i class="fa-solid fa-cart-shopping"></i> <span class="mobile-topbar-ul---span">Store</span></a></li>
+                        <li class="mobile-topbar--ul--li"><a class="mobile-topbar--ul--li-a" href="https://proyecto40.es/reglas"><i class="fas fa-scroll"></i><span class="mobile-topbar-ul---span">Reglas</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- MENÚ PARA PC -->
+                <div class="contenedor">
+                    <div class="topbar-items">
+                        <ul class="nav_ul">
+                            <li class="nav_ul_li"><a class="link" href="#"><i class="fas fa-home emoji"></i> <span class="nav-texto">Inicio</span></a></li>
+                            <li class="nav_ul_li"><a class="link" href="https://discord.gg/NfUg5WBGuQ"><i class="fa-brands fa-discord emoji"></i> <span class="nav-texto">Discord</span></a></li>
+                            <li class="nav_ul_li"><a class="link" href="https://store.proyecto40.es"><i class="fa-solid fa-cart-shopping emoji"></i> <span class="nav-texto">Store</span></a></li>
+                            <li class="nav_ul_li"><a class="link" href="https://proyecto40.es/reglas"><i class="fas fa-scroll emoji"></i><span class="nav-texto">Reglas</span></a></li>
+                        </ul>
+
+
+                        <div id="menu--movil" class="menu--movil">
+                            <i class="fa-solid fa-bars emoji-mobile"></i>
+                        </div>
+
+
+                        <div class="copy-ip" id="CopyIP"> 
+                            <noscript id="info-noscript" class="texto-users info-javascript" >¡Habilita JavaScript para descubrir todas las características de esta página!</noscript>
+                            <p id="info-users" class="texto-users">Unete a <b id="users_online">0</b> usuarios conectados</p>
+                            <p class="ip">server.proyecto40.es</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="contenedor-logo">
+                <img class="logo" src="/assets/images/logos/logo.png" alt="Logo de Proyecto40 Network"/>
+            </div>
+
+            <div class="fondo"></div>
+            <div class="particles-js" id="particles-js"></div>
+
+        </header>
+
+        <!-- CONTENEDOR + EMOJI PARA CAMBIAR DE TEMA -->
+
+        <div id="change-theme" class="change-theme">
+            <i id="theme--icon" class="fas fa-adjust"></i>
+        </div>
+
+        <style>
+            .regla {
+                list-style-type: decimal; /* Primer nivel */
+            }
+
+            .regla2 {
+                list-style-type: lower-latin;
+            }
+            .canal {
+                display: inline-block;
+                background-color: #3a406e;
+                color: #d4d8ff;
+                border-radius: 2.5px; /* hace que las esquinas sean redondeadas */
+                padding: 1.5px 2.5px; /* agregar espacio alrededor del texto */
+                font-family: "Whitney", sans-serif;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            .hash{
+                font-size: medium;
+                padding-right: 1.5px;
+            }
+
+            .canal:hover{
+                background-color: #5865f2;
+            }
+        </style>
+
+        <main class="contenido">
+            <div class="caja">
+                <section class="reglas">
+                    <h1 class="titulo" id="Reglas-Server"> Reglas Discord</h1>
+                    <p class="introduccion">
+                        Las siguientes reglas aplican al <a href="">servidor de <span class="discord">Discord.</span></a> Estas pueden   ser modificadas por el <abbr class="significado" title="Head Staff">HS</abbr> en cualquier momento dependiendo de las circunstancias.
+                    </p>
+
+
+                    <article>
+
+                        <header><h2 class="titulos-reglas" id="MUTE">1. MUTE</h2></header>
+                        <ol>
+                            <li class="regla"><strong>Flood:</strong> Repetir una letra, sílaba, palabra o símbolo más de 12 veces: Mute 20min la primera vez, 30min la segunda y mute 2h la tercera.</li>
+                            <ol>
+                                <li class="regla2">En caso de usar más de 8 emojis en un solo mensaje se considerará flood.</li>
+                            </ol>
+
+                            <li class="regla"><strong>Mayus:</strong> Escribir con más de 8 letras mayúsculas sin que sea necesario: mute 20min la primera vez, 30min la segunda y mute 2h la tercera.
+                                <ol>
+                                    <li class="regla2">En caso de que sean siglas, varios nicks con mayúsculas u otra razón por la que sea necesario poner mayúsculas es aceptable.</li>
+                                </ol>
+                            </li>
+
+                            <li class="regla"><strong>Spam:</strong> Poner mensajes al azar solo para subir el nivel de usuario, escribir 5 líneas seguidas con 2 palabras o menos: Mute 20min la primera vez, 30min la segunda vez y mute 2h la tercera.</li>
+                            <ol>
+                                <li class="regla2">Spam de comandos: Mute 30min la primera vez, mute 2h la segunda y mute 12h la tercera.</li>
+                            </ol>
+                            <li class="regla"><strong>Insultos, Tóxicidad, Denigración:</strong> Insultar a una persona, tener comportamientos “tóxicos” con la comunidad o denigrar a una persona o un grupo de personas por su raza, religión, género o cualquier otro motivo: Mute 1h la primera vez, mute 12h la segunda y ban 1 semana la 3° vez.</li>
+
+                            <li class="regla"><strong>Evadir el filtro del chat:</strong> Mute de 1 hora la primera vez, mute de 2h la segunda y ban temporal de 12 horas la tercera vez. </li>
+
+
+                            <li class="regla"><strong>Pasar links externos al servidor:</strong> El bot bloqueará cualquier enlace que no sea del servidor, pero en caso de evadir el filtro y poner un link externo a Proyecto40: Mute 1h la primera vez, ban 2 días la segunda y ban 7 días la tercera.</li>
+
+                            <li class="regla"><strong>Alborotar el chat:</strong> Se considera alborotar el chat la acción de enfrentar/provocar a uno o varios usuarios con el fin de causar una pelea entre ellos; Mute de 1 hora la primera vez, mute de 2h la segunda y ban temporal de 12 horas la tercera vez. </li>
+
+                            <li class="regla"><strong>Usar los bots fuera de sus canales:</strong> La mayoría de los comandos deben ser ejecutados en <a class="canal" href="https://discord.com/channels/387660990583406592/686011210428186636"><span class="hash">#</span>comandos</a> en caso de no hacerlo; mute 10min la primera vez, mute 20min la segunda y mute 30min la tercera.</li>
+                            <li class="regla"><strong>Publicitar una red social que no esté relacionada con el servidor:</strong> mute 2h la primera vez, mute 12h la segunda, ban 1 día la tercera.</li>
+                            <li class="regla"><strong>Recomendar/pedir hacks:</strong> Mute 3 días la primera vez, mute 7 días la segunda y ban permanente la tercera.</li>
+ 
+                            <li class="regla"><strong>Molestar/amenazar/denigrar al staff:</strong> mute 2h la primera vez, mute 12h la segunda y ban 3 días la tercera.</li>
+                            <li class="regla"><strong>Exceso de reacciones:</strong> Añadir reacciones excesivamente a uno o varios mensajes, o poner gran cantidad de reacciones a un solo mensaje: mute 20min la primera vez, mute 30min la segunda y mute 2h la tercera.</li>
+                            <li class="regla"><strong>Agregar imágenes, links, o recomendar páginas para adultos:</strong> mute 40min la primera vez, ban 1h la segunda y ban 12h la tercera vez.</li>
+                            <li class="regla"><strong>Apelar fuera de los tickets:</strong> mute 20min la primera vez, mute 40min la segunda mute 1 día la tercera.
+                                <ol>
+                                    <li class="regla2">Abrir ticket de apelación cuando ya se había dado una respuesta anteriormente.</li>
+                                    <li class="regla2">Apelar la sanción  de otro usuario por repetidas veces.<li>
+                                </ol>
+                            </li> 
+                        </ol>
+                    </article>
+
+
+                    <article>
+                        <header><h2 class="titulos-reglas" id="WARN">2. WARN</h2></header>
+                        <ol>
+                            <li class="regla"><strong>Mencionar otros servidores de Minecraft en el chat: </strong> warn la primera, mute de 20m la segunda y mute de 1h la tercera.
+                            </li> 
+                            <li class="regla"> <strong>Ponerse un nombre ofensivo/obsceno o igual a otro usuario:</strong> warn la primera, mute de 12h la segunda y ban de 1 día la tercera.</li>
+                            <li class="regla"><strong>Mencionar a miembros del staff solo por jugar o para molestar:</strong> Warn la primera vez, mute de 2h la segunda.</li>
+                        </ol>
+                    </article>
+
+
+                    <article>
+                        <header><h2 class="titulos-reglas" id="KICK">3. KICK</h2></header>
+                        <ol>
+                            
+                            <li class="regla"><strong>Poner un estado personalizado con la IP de otro servidor:</strong> kick la primera y segunda vez, ban permanente la tercera.
+                                <ol>
+                                    <li class="regla2">Dar publicidad en el apartado "Sobre Mí", es legal.</li>
+                                </ol>
+                            </li>
+                            
+                            <li class="regla"><strong>Poner imágenes en tu foto de perfil con contenido para adultos:</strong> kick la primera vez, ban 12h la segunda.</li>
+                        </ol>
+                    </article>
+
+                    <article>
+                        <header><h2 class="titulos-reglas" id="BAN">4. BAN</h2></header>
+                        <ol>
+                            
+                            <li class="regla"><strong>Pasar otros servidores de Discord:</strong> Ban 7d la primera vez, ban permanente la segunda.
+                                <ol>
+                                    <li class="regla2">En caso de que el discord sea propiedad de otro servidor de Minecraft: ban permanente.</li>
+                                </ol>
+                            </li>
+
+                            <li class="regla"><strong>Poner emojis con publicidad de otros servidores de Minecraft:</strong> ban permanente.</li>
+
+                            <li class="regla"><strong>Amenazar con usar hacks en el servidor:</strong> ban 14d la primera vez, ban la segunda.
+                                <ol>
+                                    <li class="regla2">Amenazar el servidor de discord o minecraft: ban permanente.</li>
+                                </ol>
+                            </li>
+
+                            <li class="regla"><strong>Usar varias cuentas de discord:</strong> kick a tus otras cuentas la primera vez, en caso de que se repita ban permanente.</li>
+
+                            <li class="regla"><strong>Aprovechar bug en los permisos:</strong> ban permanente.</li>
+                    </article>
+
+                    <article>
+                        <header><h2 class="titulos-reglas" id="CANALES-DE-VOZ">5. CANALES DE VOZ</h2></header>
+                        <ol>
+                            
+                            <li class="regla"><strong>Insultos o lenguaje inapropiado excesivo:</strong> mute 20min.</li>
+                            
+                            <li class="regla"><strong>Pasar IP:</strong> ban permanente.</li>
+
+                            <li class="regla"><strong>Poner música con más de 1 hora de duración:</strong> warn la primera vez, kick la segunda.</li>
+
+                            <li class="regla"><strong>Poner skip en una canción sin que los demás estén de acuerdo:</strong> warn la primera vez, kick la segunda.</li>
+                        </ol>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer" class="footer">
+
+            <div class="contenedor-articulos">
+
+                <div class="contenedor">
+                    <div class="margen-articulos">
+                        <article class="footer-articulo">
+                            <a class="link_soporte" href="https://discord.gg/NfUg5WBGuQ"><h3 class="footer-titulo">Soporte</h3></a>
+                            
+                            <p class="footer-texto">
+                                En el caso que necesites ayuda de un miembro del equipo, únete a nuestro server de Discord para recibir soporte.
+                            </p>
+                        </article>
+
+                        <article class="footer-articulo">
+                            <h3 class="footer-titulo">Acerca de nosotros</h3>
+
+                            <p class="footer-texto">
+                                Somos un server de Minecraft no-premium con modalidades clásicas y arcade. Hogar para nuestros usuarios desde 2015.
+                            </p>
+                        </article>
+
+                        <article class="footer-articulo">
+                            <h3 class="footer-titulo">Legal</h3>
+
+                            <ul class="ul_legal">
+                                <li class="ul_legal_li"><a class="ul_legal_li_a" href="https://proyecto40.es/terminos">Términos y Condiciones</a></li>
+                                <li class="ul_legal_li"><a class="ul_legal_li_a" href="https://proyecto40.es/legal">Políticas de Privacidad</a></li>
+                            </ul>
+
+                        </article>
+                    </div>
+                </div>
+            </div>        
+
+
+            <div class="footer-contenedor-copyright">
+                <div class="contenedor margen-articulos">
+                    <p id="copyright" class="copyright">&copy; Copyright Proyecto40. 2022 Todos Los Derechos Reservados.</p>
+                </div>
+
+            </div>
+
+
+        </footer>
+
+        <script src="/assets/javascript/particles.min.js"></script>
+        <script src="/assets/javascript/events-click.js"></script>
+        <script src="/assets/javascript/easter-egg.js"></script>
+
+    </body>
+</html>
